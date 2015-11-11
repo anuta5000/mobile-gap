@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>приложение</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="mobile-web-app-capable" content="yes">
+	 	<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="orange" />
+		<!--
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+		-->
+		<link rel="stylesheet" href="assets/css/libs/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/libs/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="assets/vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="assets/vendor/wow/animate.css" />
+		<link rel="stylesheet" href="assets/css/nativedroid2.css" />
+		<link rel="stylesheet" href="assets/css/nativedroid2.color.orange.css" />
+		
+		<link rel="stylesheet" href="assets/css/custom_style.css" />
+		
+
+		
+
+	</head>
+	<body>
+
+		<div data-role="page" id="main">
+
+			<nd2-include data-src="fragments/panel.left.html"></nd2-include>
+			<!--
+			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="fragments/bottom.sheet.html"></nd2-include>
+			</div>
+			-->
+			<nd2-include data-src="fragments/panel.right.html"></nd2-include>
+
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#rightpanel" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;"><i class="zmdi zmdi-more-vert"></i></a>
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s' id="h1" data-i18n="app_name">ChatAndLearn1</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-inset="false">
+				<img src="assets/img/home_logo.png" data-position="inline" style="width:270px;height:360px;" />
+				<br>
+				<a href="#login" class="" data-role="button" data-transition="slide" >Go to Login</a>
+			</div>
+			
+			
+
+		</div>
+		
+		
+		
+		
+		<div data-role="page" id="login" data-backbtn="false">  
+			
+			<nd2-include data-src="fragments/panel.left.html"></nd2-include>
+			
+			<!--<nd2-include data-src="fragments/panel.right.html"></nd2-include> -->
+			
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#chat" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<i class="zmdi zmdi-menu"></i>
+				</a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s' style="font-size:22px;">  </h1>
+			</div>
+			
+	
+			<div data-role="content" class="ui-content" >	
+
+				
+				<img src="assets/img/logo2.png" data-position="inline" style="width:100px;height:126px;" />
+				
+				
+				<div data-role="fieldcontain">
+					
+					<a href="#" class="btn_fb_login" data-role="button" data-i18n="login">Log in with Facebook</a>
+					<p data-i18n="or"></p>
+					
+					<form action="">
+						<div class="ui-body-inherit ui-corner-all ui-shadow-inset">
+							<label for="loginInput" name="login" data-i18n="login_title">Логин:</label>  
+							<input type="text" name="loginInput2" id="loginInput"  data-clear-btn="true" placeholder="E-mail" value=""  />
+						</div>
+
+						<div style="">
+							<label for="passwordInput" data-i18n="password">Пароль:</label>
+							<input type="password" name="passwordInput" id="passwordInput" data-clear-btn="true" placeholder="Пароль" value=""  />
+						</div>
+
+						<div style="text-align:center" class="btn_green">
+							<button type="submit" name="submit" data-inline="true" data-i18n="forgot_your_password" />Забыли пароль?</button>
+							<button type="submit" name="submit" data-inline="true" data-i18n="signin"  />Войти</button>
+							<!--<input type="submit" name="submit" data-inline="true"  value="Войти"  /> -->							
+						</div>			
+		
+					
+					<a href="#registration" class="bt_registration" data-i18n="registernewaccount">Зарегистрируйте новый аккаунт</a>
+					<br>
+					
+					<a href="#" class="" data-i18n="privacy_policy_simple" >Политика конфиденциальности</a>
+				</div>	
+			</div>
+			<!--<div data-role="footer" data-position="fixed" >© 2015, Копирайт</div>  -->
+		</div> 
+		
+		
+		
+		
+		
+		<div data-role="page" id="registration" >
+			
+			<nd2-include data-src="fragments/panel.left.html"></nd2-include>
+			
+			<nd2-include data-src="fragments/panel.right.html"></nd2-include>
+			<!--
+			<div data-role="header">
+				<a href="#" data-role="button" data-inline="true" data-transition="slide">
+					<img src="assets/img/menu_icon_on5.png" data-position="inline" style="height:24px;width:30px;" />
+				</a>
+				<h1>ChatAndLearn</h1>
+				<a href="#chat" data-role="button" class="ui-btn-right" data-transition="slide">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+			</div>
+			-->
+			
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#chat" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+				<a href="#main" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<img src="assets/img/arrow_left2.png" data-position="inline" style="height:30px;width:17px;" />
+				</a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>ChatAndLearn</h1>
+			</div>
+			
+			
+			<div data-role="content" class="ui-content" >	
+				
+				<!--<img src="assets/img/logo2.png" data-position="inline" style="width:100px;height:126px;margin-bottom:20px;" /> -->
+				
+				<div data-role="fieldcontain">
+					
+					<form action="">
+	
+						<div style="">
+							<label for="loginInput">Логин:</label>
+							<input type="text" name="loginInput" id="loginInput" data-clear-btn="true" placeholder="e-mail" value=""  />
+						</div>
+
+						<div style="">
+							<label for="passwordInput">Пароль:</label>
+							<input type="password" name="passwordInput" id="passwordInput" data-clear-btn="true" placeholder="password" value=""  />
+						</div>
+						
+						<div style="">
+							<label for="passwordRepeat">Повторить:</label>
+							<input type="password" name="passwordRepeat" id="passwordRepeat" data-clear-btn="true" placeholder="Повторить пароль" value=""  />
+						</div>
+
+						<div style="text-align:center" class="btn_green" data-theme="e">			
+							<!--<button type="submit" name="submit" data-inline="true" />Отправить</button>  -->
+							<a href="#popupDialog" type="submit" data-rel="popup" aria-haspopup="true" aria-owns="popupDialog" data-transition="pop" data-position-to="window" data-role="button">Отправить</a>
+						</div>
+						
+						
+						
+						
+						
+							<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-dismissible="false" style="display:block;max-width:400px;">
+								<div data-role="header" data-theme="a">
+								<h1>Registration</h1>
+								</div>
+								<div role="main" class="ui-content">
+									<h3 class="ui-title">Сообщение:</h3>
+								<p>Ссылка с подтверждением отправлена на почту.</p>
+									<!--<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a> -->
+									<!--<a href="#registration2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Ок</a> -->
+									<a href="#registration2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">Ок</a>
+								</div>
+							</div>
+										
+						
+						<a href="#" class=""  >Политика конфиденциальности</a>
+					</form>
+	
+				</div>	
+				
+			</div>
+					
+		</div> 
+		
+		
+	
+		
+		<div data-role="page" id="registration2" >
+			
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#chat" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+				<a href="#main" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<img src="assets/img/arrow_left2.png" data-position="inline" style="height:30px;width:17px;" />
+				</a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>ChatAndLearn</h1>
+			</div>
+			
+			
+			<div data-role="content" class="ui-content">
+				
+				<div data-role="fieldcontain">
+					
+					<form action="">
+	
+						<div style="">
+							<label for="firstNameInput">Имя:</label>
+							<input type="text" name="firstNameInput" id="firstNameInput" data-clear-btn="true" placeholder="Ваше имя" value=""  />
+						</div>
+						
+						<div style="">
+							<label for="lastNameInput">Фамилия:</label>
+							<input type="text" name="lastNameInput" id="lastNameInput" data-clear-btn="true" placeholder="Фамилия" value=""  />
+						</div>
+						
+						
+						<label for="self_sex">Я</label>
+						<select name="flip2" id="self_sex" data-role="flipswitch">
+							<option value="on">Муж.</option>
+							<option value="off">Жен.</option>
+						</select>
+						
+						<div style="">
+							<label for="self_age">Возраст:</label>
+							<input type="range" name="slider2" id="self_age" value="18" min="18" max="100" data-highlight="true">
+						</div>
+						
+						<div class="left_align">
+							<div style="">
+							<label for="select-choice-1b" class="select">Мой родной язык</label>
+								<select name="select-choice-1" id="select_native_language" data-native-menu="true">
+									<option value="Русский">Русский</option>
+									<option value="Английский">Английский</option>
+									<option value="Немецкий">Немецкий</option>
+									<option value="Португальский">Португальский</option>
+									<option value="java">Java</option>
+								</select>
+							</div>
+							
+							
+							<div style="">
+								<label for="select_speak_language" class="select">и Я хочу общаться на</label>
+								<select name="select_speak_language" id="select_speak_language" data-native-menu="true">
+									<option value="Русский">Русский</option>
+									<option value="Английский">Английский</option>
+									<option value="Немецкий">Немецкий</option>
+									<option value="Португальский">Португальский</option>
+									<option value="java">Java</option>
+								</select>
+							</div>	
+							
+							<fieldset data-role="controlgroup">
+								<legend>С</legend>
+								<input type="radio" name="want_speak" id="want_speak_1v" checked="" hidden=" ">
+								<label for="want_speak_1v">Носителем языка</label>
+								<input type="radio" name="want_speak" id="want_speak_2v" hidden=" ">
+								<label for="want_speak_2v">Любым</label>
+								<!--
+								<input type="checkbox" name="want_speak_1v" id="want_speak_1v" checked="" hidden=" ">
+								<label for="want_speak_1v">Носителем языка</label>
+								<input type="checkbox" name="want_speak_2v" id="want_speak_2v" hidden=" ">
+								<label for="want_speak_2v">Любым</label>
+								-->
+							</fieldset>
+							
+							<fieldset data-role="controlgroup">
+								<legend><span>Показать мне</span> <span style="text-align:right;">Мужчин/женщин</span></legend>
+								<input type="radio" name="sex" id="look_man_1v" checked="" hidden=" ">
+								<label for="look_man_1v">Мужчин</label>
+								<input type="radio" name="sex" id="look_man_2v" hidden=" ">	
+								<label for="look_man_2v">Женщин</label>
+							</fieldset>
+						</div>
+
+						<div style="text-align:center" class="btn_green" data-theme="e">			
+							<button type="submit" name="submit" data-inline="true" />Обновление</button> 
+							<!--<a href="#popupDialog" type="submit" data-rel="popup" aria-haspopup="true" aria-owns="popupDialog" data-transition="pop" data-position-to="window" data-role="button">Отправить</a>  -->
+						</div>
+				
+					</form>
+				</div>	
+			</div>
+			
+
+		</div>
+		
+		
+		
+		
+		
+		<div data-role="page" id="profile" data-backbtn="false">
+			
+			<nd2-include data-src="fragments/panel.left.html"></nd2-include>
+			
+			<nd2-include data-src="fragments/panel.right.html"></nd2-include>
+		
+			
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#chat" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<i class="zmdi zmdi-menu"></i>
+				</a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>ChatAndLearn</h1>
+			</div>
+			
+			<div data-role="content" class="ui-content" data-wow-delay='0.4s'>
+				
+				<div data-role="fieldcontain">
+					
+					<form action="">
+				
+						<img src="assets/img/profile_image.png" data-position="inline" />
+						
+						<div class="profile_data">
+							<label for="fioInput" class="profile_title">Имя:</label>
+							<input type="text" name="fioInput" id="fioInput" data-clear-btn="true" placeholder="Ваше имя" value=""  />
+						</div>
+						<div class="profile_data">
+							<label for="profile_age" class="profile_title">Возраст:</label>
+							<input type="range" name="profile_age" id="profile_age" value="18" min="18" max="100" data-highlight="true">
+						</div>
+						<div class="profile_data">
+							<label for="select_status" class="select profile_title">Статус:</label>
+							<select name="select_status" id="select_status" data-native-menu="true">
+								<option value="статус1">статус1</option>
+								<option value="статус2">статус2</option>
+								<option value="статус3">статус3</option>
+							</select>
+						</div>
+						
+						<div style="text-align:center" class="btn_green" data-theme="e">			
+							<button type="submit" name="submit" data-inline="true" />Обновить</button> 
+						</div>
+					</form>			
+				</div>
+				
+				<div class="profile_data">
+					<label class="profile_title">Подарки:</label>
+				</div>
+
+				<div class="presents">
+					<img src="assets/img/sticker_balloons.png" data-position="inline" />  
+					<img src="assets/img/sticker_cake.png" data-position="inline" />
+					<img src="assets/img/sticker_cat.png" data-position="inline" />
+				</div>
+				
+				<div class="presents">
+					<img src="assets/img/sticker_heart.png" data-position="inline" />  
+					<img src="assets/img/sticker_pie.png" data-position="inline" />
+					<img src="assets/img/sticker_rabbit.png" data-position="inline" />
+				</div>
+			</div>
+			
+
+		</div>
+		
+		
+		
+		
+		
+		<div data-role="page" id="userprofile" data-backbtn="false">
+			
+			<nd2-include data-src="fragments/panel.left.html"></nd2-include>
+			
+			<nd2-include data-src="fragments/panel.right.html"></nd2-include>
+		
+			
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#chat" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<i class="zmdi zmdi-menu"></i>
+				</a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>ChatAndLearn</h1>
+			</div>
+			
+			<div data-role="content" class="ui-content" data-wow-delay='0.4s'>
+				
+				<img src="assets/img/profile_image.png" data-position="inline" />
+
+				<div class="profile_data">
+					<label class="profile_title">Имя:</label>
+					<label>Иван Иванов</label>
+				</div>
+				<div class="profile_data">
+					<label class="profile_title">Возраст:</label>
+					<label>18 лет</label>
+				</div>
+				<div class="profile_data">
+					<label class="profile_title">Статус:</label>
+					<label>Какой статус?</label>
+				</div>
+				<div class="profile_data">
+					<label class="profile_title">Подарки:</label>
+				</div>
+
+				<div class="presents">
+					<img src="assets/img/sticker_balloons.png" data-position="inline" />  
+					<img src="assets/img/sticker_cake.png" data-position="inline" />
+					<img src="assets/img/sticker_cat.png" data-position="inline" />
+				</div>
+				
+				<div class="presents">
+					<img src="assets/img/sticker_heart.png" data-position="inline" />  
+					<img src="assets/img/sticker_pie.png" data-position="inline" />
+					<img src="assets/img/sticker_rabbit.png" data-position="inline" />
+				</div>
+			</div>
+			
+
+		</div>
+		
+		
+		
+		
+		
+		<div data-role="page" id="chat">
+			<nd2-include data-src="fragments/panel.left.html"></nd2-include>
+			
+			<nd2-include data-src="fragments/panel.right.html"></nd2-include>
+		
+			
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#chat" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' style="margin-top:10px;">
+					<img src="assets/img/ic_chat_list.png" data-position="inline" style="height:48px;width:48px;" />
+				</a>
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+					<i class="zmdi zmdi-menu"></i>
+				</a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>ChatAndLearn</h1>
+			</div>
+			<!--
+			<div data-role="header">
+				<a href="#main" data-role="button" data-inline="true" data-transition="slide">
+					<img src="assets/img/arrow_left2.png" data-position="inline" style="height:30px;width:17px;" />
+				</a>
+				<h1>ChatAndLearn</h1>
+			</div>
+			-->
+			<div data-role="content" class="ui-content">
+				<div class="chat">
+					<div class="bubble me">Hello there!</div>
+					<div style="clear:both;"></div>
+					<div class="bubble you">Hi. I'm an expandeable chat box with box shadow. How are you? I expand horizontally and vertically, as you can see here.</div>
+					<div style="clear:both;"></div>
+					<div class="bubble me">Awesome.</div>
+				</div>
+			</div>
+			
+
+		</div>
+
+		
+		
+
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>  -->
+		<script type="text/javascript" src="assets/js/libs/jquery.2.1.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/libs/jquery-ui.1.11.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/waves/waves.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/wow/wow.min.js"></script>
+		<script type="text/javascript" src="assets/js/nativedroid2.js"></script>
+		<script type="text/javascript" src="assets/nd2settings.js"></script>
+		
+		
+		<script type="text/javascript" src="assets/js/i18next-1.10.1/i18next-1.10.1.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+
+
+	</body>
+</html>
